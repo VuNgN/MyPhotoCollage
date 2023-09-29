@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+
+    <com.sutech.photoeditor.widget.customview.OneOneRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundTintGrey"
+            />
+
+        <ImageView
+            android:id="@+id/imgThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/bgImageSelected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorMainSelected"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/btnRemove"
+            android:layout_width="@dimen/img_size_normal"
+            android:layout_height="@dimen/img_size_normal"
+            app:srcCompat="@drawable/ic_remove_selected"
+            android:padding="@dimen/img_padding_large"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:layout_width="@dimen/img_size_small"
+            android:layout_height="@dimen/img_size_small"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/bg_border_circle"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/img_padding"
+            app:textColorDefault ="false"/>
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:id="@+id/tvSelected"
+            android:layout_width="@dimen/img_size_small"
+            android:layout_height="@dimen/img_size_small"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/bg_circle"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/img_padding"
+            app:textColorDefault ="false"/>
+
+    </com.sutech.photoeditor.widget.customview.OneOneRelativeLayout>
+
+</androidx.cardview.widget.CardView>

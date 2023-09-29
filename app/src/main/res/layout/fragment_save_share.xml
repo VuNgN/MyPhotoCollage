@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tbSave"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/btnIapSaveShare"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/ic_iap_pro" />
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save_amp_share"
+            android:textSize="@dimen/_15ssp" />
+
+        <ImageView
+            android:id="@+id/btnBackToHome"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:padding="@dimen/_6sdp"
+            app:srcCompat="@drawable/ic_home_new" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tbSave">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/nativeSaveShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginHorizontal="16dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/space_screen_small"
+                android:background="@drawable/bg_ads">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/loading_ad_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0A000000">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:background="#4D000000" />
+
+                    <View
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:background="#4D000000" />
+
+                    <com.sutech.photoeditor.widget.text.TextViewMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_24sdp"
+                        android:text="Loading ad..."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/viewGone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone" />
+
+
+            <FrameLayout
+                android:id="@+id/adsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:elevation="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" >
+                <include layout="@layout/layout_ads_native_share_custom"/>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRateApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:background="@drawable/bg_radius_8"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp" >
+
+                <com.sutech.photoeditor.widget.text.TextViewBold
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rate_app"
+                    android:textColor="#EE3E66"
+                    android:textSize="@dimen/_15ssp" />
+                <com.sutech.photoeditor.widget.text.TextViewMedium
+                    android:id="@+id/tvContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_below="@+id/tvRate"
+                    android:text="@string/iflikeapp"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="@dimen/_60sdp"
+                    android:weightSum="5"
+                    android:layout_below="@+id/tvContents">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ivWave1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_ellipse"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivStar1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_un_star_up" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ivWave2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_ellipse"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivStar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_un_star_up" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ivWave3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_ellipse"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivStar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_un_star_up" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ivWave4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_ellipse"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivStar4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_un_star_up" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/ivWave5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_ellipse"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivStar5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_un_star_up" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_offer_5star" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="28dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_rate_plus"
+                    android:layout_below="@+id/layoutRate"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_64sdp"/>
+
+                <com.sutech.photoeditor.widget.text.TextViewSemiBold
+                    android:id="@+id/imThbest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:singleLine="true"
+                    android:text="@string/the_best_we_can_get"
+                    android:textColor="#EB4747"
+                    android:layout_below="@+id/layoutRate"
+                    android:textStyle="bold"
+                    android:layout_toStartOf="@+id/img"/>
+                <com.sutech.photoeditor.widget.text.TextViewSemiBold
+                    android:id="@+id/btnRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_radius_8"
+                    android:backgroundTint="#88dde3"
+                    android:text="@string/rate_app"
+                    android:gravity="center"
+                    android:layout_margin="16dp"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@+id/imThbest"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tbSave"
+        app:layout_constraintBottom_toTopOf="@+id/btnShareSaved"
+        app:layout_constraintDimensionRatio="1:1"
+        >
+        <com.skydoves.transformationlayout.TransformationLayout
+            android:id="@+id/transformationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/_2sdp"
+            app:transformation_duration="400"
+            app:transformation_targetView="@+id/view_image">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivSaveSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/black"
+                    android:adjustViewBounds="true"
+                    app:riv_corner_radius="@dimen/_6sdp" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_search" />
+            </FrameLayout>
+
+        </com.skydoves.transformationlayout.TransformationLayout>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btnShareSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/background_iap2"
+        android:backgroundTint="#4355FF"
+        android:layout_marginBottom="@dimen/space_screen_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutAdsSaveAndShare"
+        >
+
+        <ImageView
+            android:id="@+id/ivS"
+            android:layout_width="@dimen/space_screen_small"
+            android:layout_height="@dimen/space_screen_normal"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_screen_normal"
+            app:srcCompat="@drawable/ic_share_new"
+            app:tint="@color/white" />
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:id="@+id/tvShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_screen_small"
+            android:layout_marginEnd="@dimen/space_screen_normal"
+            android:layout_toEndOf="@id/ivS"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:textColorDefault="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+            android:background="#B0E1E1E1"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutAdsSaveAndShare"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        android:layout_height="60dp" >
+        <TextView
+            android:id="@+id/viewGoneAdSaveAndShare"
+            android:gravity="center"
+            android:text="Loading ad..."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/view_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ImageView
+         android:id="@+id/ivSaveLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:id="@+id/btnCancelShareSaved"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:adjustViewBounds="true"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

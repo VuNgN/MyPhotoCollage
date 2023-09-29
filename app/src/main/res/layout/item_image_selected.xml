@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="wrap_content"
+   android:layout_height="match_parent"
+   android:layout_marginVertical="@dimen/img_padding"
+   android:layout_marginStart="@dimen/img_padding_large">
+
+   <androidx.cardview.widget.CardView
+      android:id="@+id/cvImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/img_padding_large"
+      android:layout_marginEnd="@dimen/img_padding"
+      app:cardBackgroundColor="@color/transparent_40"
+      app:cardCornerRadius="0dp"
+      app:cardElevation="0dp">
+
+
+      <ImageView
+         android:id="@+id/imgThumbSelected"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:contentDescription="@string/app_name"
+         android:scaleType="centerCrop" />
+
+
+   </androidx.cardview.widget.CardView>
+
+   <ImageView
+      android:id="@+id/btnRemove"
+      android:layout_width="@dimen/img_size_small"
+      android:layout_height="@dimen/img_size_small"
+       android:layout_alignParentEnd="true"
+      android:scaleType="centerCrop"
+      app:srcCompat="@drawable/ic_remove_image" />
+
+</RelativeLayout>

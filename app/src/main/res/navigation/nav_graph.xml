@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.sutech.photoeditor.view.home.HomeFrag"
+        android:label="HomeFrag" >
+        <action
+            android:id="@+id/action_homeFrag_to_settingFrag"
+            app:destination="@id/settingFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_galleryFrag"
+            app:destination="@id/galleryFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_savedFrag"
+            app:destination="@id/savedFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_IAPFragment"
+            app:destination="@id/IAPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFrag"
+        android:name="SettingFrag"
+        android:label="SettingFrag" >
+        <action
+            android:id="@+id/action_settingFrag_to_policyFrag"
+            app:destination="@id/policyFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFrag"
+        android:name="com.sutech.photoeditor.view.gallery.GalleryFrag"
+        android:label="GalleryFrag" >
+        <action
+            android:id="@+id/action_galleryFrag_to_editFrag"
+            app:destination="@id/editFrag" />
+        <action
+            android:id="@+id/action_galleryFrag_to_puzzleFrag"
+            app:destination="@id/puzzleFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFrag"
+        android:name="com.sutech.photoeditor.view.saved.SavedFrag"
+        android:label="SavedFrag" />
+
+    <fragment
+        android:id="@+id/editFrag"
+        android:name="com.sutech.photoeditor.view.edit_image.EditFrag"
+        android:label="EditFrag" >
+        <action
+            android:id="@+id/action_editFrag_to_saveAndShareFrag"
+            app:destination="@id/saveAndShareFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveAndShareFrag"
+        android:name="com.sutech.photoeditor.view.save_share.SaveAndShareFrag"
+        android:label="SaveAndShareFrag" >
+        <action
+            android:id="@+id/action_saveAndShareFrag_to_IAPFragment"
+            app:destination="@id/IAPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/puzzleFrag"
+        android:name="com.sutech.photoeditor.view.puzzle_image.PuzzleFrag"
+        android:label="PuzzleFrag" >
+        <action
+            android:id="@+id/action_puzzleFrag_to_saveAndShareFrag"
+            app:destination="@id/saveAndShareFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyFrag"
+        android:name="com.sutech.photoeditor.view.policy.PolicyFrag"
+        android:label="PolicyFrag" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sutech.photoeditor.view.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFrag"
+            app:destination="@id/homeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/IAPFragment"
+        android:name="com.sutech.photoeditor.view.iap.IAPFragment"
+        android:label="IAPFragment" />
+</navigation>

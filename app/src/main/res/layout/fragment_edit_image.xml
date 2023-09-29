@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <include layout="@layout/toolbar_edit" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutAdsEditImage"
+        android:layout_below="@+id/tbEdit"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/viewGoneAdEditImage"
+            android:gravity="center"
+            android:text="Loading ad..."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/wrapPhotoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:background="#E5E5E5"
+        android:layout_below="@+id/layoutAdsEditImage" >
+
+        <com.sutech.photoeditor.widget.customview.photo.PhotoEditorView
+            android:id="@+id/photoEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            app:showBorder="true"
+            app:showIcons="true" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvMenuEditMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_above="@id/menuEdit" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutAdsEditImage"
+        android:layout_above="@id/menuEdit"
+        android:visibility="gone"
+        layout="@layout/layout_crop"/>
+
+    <include
+        layout="@layout/layout_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_above="@id/menuEdit" />
+
+    <include
+        layout="@layout/layout_over_play"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_above="@id/menuEdit" />
+
+    <include
+        layout="@layout/layout_adjust"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_above="@id/menuEdit" />
+
+    <include
+        layout="@layout/layout_sticker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_above="@id/menuEdit" />
+
+    <RelativeLayout
+        android:id="@+id/menuEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btnCloseFeature"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_6sdp"
+            app:tint="#404040"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_close"
+            android:contentDescription="@string/app_name" />
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:id="@+id/tvTitleMenuEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_image" />
+
+        <ImageView
+            android:id="@+id/btnSaveEdit"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_done"
+            android:contentDescription="@string/app_name"
+            app:tint="#404040" />
+    </RelativeLayout>
+
+</RelativeLayout>

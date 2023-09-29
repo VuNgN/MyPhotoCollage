@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutBorder"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <SeekBar
+        android:id="@+id/sbLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/sbRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:progressTint="@color/colorTextBlack"
+        android:thumb="@drawable/thumb_seekbar"
+        android:backgroundTint="#14404040"
+        android:progress="0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/sbRadius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:progressTint="@color/colorTextBlack"
+        android:thumb="@drawable/thumb_seekbar"
+        android:backgroundTint="#14404040"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/sbLine" />
+
+
+    <com.sutech.photoeditor.widget.text.TextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/line"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        app:textColorDefault="false"
+        app:layout_constraintBottom_toBottomOf="@+id/sbLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbLine" />
+
+    <com.sutech.photoeditor.widget.text.TextViewMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/radius"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        app:textColorDefault="false"
+        app:layout_constraintBottom_toBottomOf="@+id/sbRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbRadius" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

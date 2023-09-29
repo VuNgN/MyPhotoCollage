@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp"
+    android:backgroundTint="@color/backgroundGrey"
+    android:background="@drawable/bg_radius_8"
+    android:padding="@dimen/space_screen_small"
+    android:layout_gravity="center_horizontal">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvChooseImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_80sdp"
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="false"
+        android:clipToPadding="true"
+        />
+
+
+    <com.sutech.photoeditor.widget.text.TextViewMedium
+        android:id="@+id/btnCancelColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_screen_small"
+        android:layout_below="@+id/rcvChooseImage"
+        app:textColorDefault="false"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        android:padding="@dimen/img_padding_large" />
+
+</RelativeLayout>

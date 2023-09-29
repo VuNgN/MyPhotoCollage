@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/basic_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar android:theme="?actionBarTheme"
+        android:id="@+id/toolbar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="?actionBarPopupTheme"
+        app:titleTextColor="@color/text_color_edit"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/adsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10.0dip" />
+
+                <ImageView
+                    android:id="@+id/preview"
+                    android:background="@color/basic_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="300.0dip"
+                    android:layout_margin="15.0dip"
+                    android:src="@drawable/piclist_icon_default"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/adsContainer" />
+
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/path"
+                    android:background="@color/basic_white"
+                    android:padding="10.0dip"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    app:layout_constraintTop_toBottomOf="@id/preview" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sharebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    app:cardCornerRadius="5.0dip"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/path">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingLeft="50.0dip"
+                        android:paddingRight="50.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnFace"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:src="@drawable/ic_logo_facebook"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnInta"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:src="@drawable/ic_logo_instar"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnMore"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:src="@drawable/ic_logo_more"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

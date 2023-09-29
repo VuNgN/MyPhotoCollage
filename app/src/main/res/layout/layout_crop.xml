@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layoutCropImage"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="visible">
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/cropImageView"
+        android:padding="@dimen/_16sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        custom:scv_background_color="@color/collage_bg"
+        custom:scv_crop_mode="fit_image"
+        custom:scv_frame_color="@color/colorAccent"
+        custom:scv_frame_stroke_weight="1.0dip"
+        custom:scv_guide_color="@color/colorAccent"
+        custom:scv_guide_show_mode="show_always"
+        custom:scv_guide_stroke_weight="1.0dip"
+        custom:scv_handle_color="@color/colorAccent"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_handle_size="10.0dip"
+        custom:scv_min_frame_size="100.0dip"
+        android:layout_above="@+id/rcvEditCrop"
+        custom:scv_overlay_color="#aa1c1c1c"
+        custom:scv_touch_padding="8.0dip"
+        android:background="@color/black"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvEditCrop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

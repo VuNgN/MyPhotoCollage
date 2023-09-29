@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="250dp"
+    android:background="@drawable/bg_radius_8"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/space_screen_small"
+    android:layout_gravity="center_horizontal" >
+
+
+    <com.sutech.photoeditor.widget.text.TextViewSemiBold
+        android:id="@+id/btnUpdateDiary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/img_padding_large" android:layout_marginTop="@dimen/space_screen_small"
+        app:textColorDefault="false"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp" />
+
+        <com.sutech.photoeditor.widget.text.TextViewSemiBold
+            android:id="@+id/btnDeleteDiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_screen_small"
+            android:textColor="@color/colorTextBlack"
+            app:textColorDefault="false"
+            android:textSize="14sp"
+            android:padding="@dimen/img_padding_large"  />
+        <com.sutech.photoeditor.widget.text.TextViewSemiBold
+            android:id="@+id/btnCancelMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_marginTop="@dimen/space_screen_small"
+            app:textColorDefault="false"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="14sp"
+            android:padding="@dimen/img_padding_large"  />
+
+    </LinearLayout>

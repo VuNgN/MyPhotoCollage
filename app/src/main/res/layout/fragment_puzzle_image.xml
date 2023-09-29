@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+
+    <include layout="@layout/toolbar_edit" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutAdsEditCollage"
+        android:layout_below="@+id/tbEdit"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60dp" >
+        <TextView
+            android:id="@+id/viewGoneAdEditCollage"
+            android:gravity="center"
+            android:text="Loading ad..."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrapPuzzleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_120sdp"
+        android:layout_below="@+id/layoutAdsEditCollage"
+        android:background="@color/black">
+
+        <com.sutech.photoeditor.editor.featuresfoto.puzzle.PuzzleView
+            android:id="@+id/photoPuzzleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/black"
+            app:showBorder="true"
+            app:showIcons="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvMenuPuzzleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_above="@id/menuPuzzle"
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="false"
+        android:paddingBottom="@dimen/_12sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvPuzzleCrop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_above="@id/menuPuzzle"
+        />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_border"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_above="@id/menuPuzzle"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvPuzzleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_above="@id/menuPuzzle"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvPuzzleBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:visibility="gone"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_above="@id/menuPuzzle"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/menuPuzzle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F8F8F8">
+
+        <ImageView
+            android:id="@+id/btnBackPuzzle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_6sdp"
+            app:tint="#404040"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_close"
+            android:contentDescription="@string/app_name" />
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:id="@+id/tvTitleMenuPuzzle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_layout" />
+
+        <ImageView
+            android:id="@+id/btnSavePuzzle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_done"
+            android:contentDescription="@string/app_name"
+            app:tint="#404040" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

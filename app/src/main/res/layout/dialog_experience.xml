@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:minWidth="380dp"
+    android:padding="@dimen/space_screen_small"
+        >
+    <LinearLayout
+        android:id="@+id/lnRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_screen_small"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCloseRate"
+        app:layout_constraintTop_toBottomOf="@id/btnCloseRate"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_radius_12"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How was your experience with this app?"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginTop="@dimen/space_screen_small"
+            android:layout_marginBottom="@dimen/space_screen_small"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearBad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/iconBad"
+                    android:layout_width="@dimen/img_size_small"
+                    android:layout_height="@dimen/img_size_small"
+                    android:src="@drawable/ic_bad"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bad"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/iconGood"
+                    android:layout_width="@dimen/img_size_small"
+                    android:layout_height="@dimen/img_size_small"
+                    android:src="@drawable/ic_good"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearExcellent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/iconExcellent"
+                    android:layout_width="@dimen/img_size_small"
+                    android:layout_height="@dimen/img_size_small"
+                    android:src="@drawable/ic_excilent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewNoThanks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No, thank you!"
+            android:layout_marginTop="@dimen/img_size_small"
+            android:layout_marginBottom="@dimen/img_size_small"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/textViewShow"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error Reporting \n Let us know about application errors "
+                />
+
+
+            <LinearLayout
+                android:id="@+id/linearButtonFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/space_screen_small"
+                android:background="@drawable/bg_blue_15"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/imageViewIconFeedback"
+                    android:layout_width="@dimen/img_size_small"
+                    android:layout_height="@dimen/img_size_small"
+                    android:src="@drawable/ic_email_white"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/img_padding_large"
+                    android:gravity="center"
+                    android:text="FEEDBACK TO US"
+                    app:textAllCaps="true"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/btnCloseRate"
+        android:layout_width="@dimen/img_size_small"
+        android:layout_height="@dimen/img_size_small"
+        android:src="@drawable/ic_close_rate"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

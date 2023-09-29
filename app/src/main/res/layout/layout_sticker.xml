@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layoutSticker"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/transparent_white_20"
+    android:layout_height="@dimen/_200sdp"
+    android:visibility="gone">
+
+    <SeekBar
+        android:id="@+id/stickerAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="30.0dip"
+        android:layout_margin="@dimen/_6sdp"
+        android:visibility="gone"
+        android:background="@null"
+        android:max="255"
+        android:progress="255"
+        android:thumb="@drawable/custom_thumb" />
+
+
+    <com.sutech.photoeditor.editor.featuresfoto.sticker.adapter.RecyclerTabLayout
+        android:id="@+id/rcvCateSticker"
+        android:background="@color/white"
+        app:rtl_tabIndicatorColor="?colorAccent"
+        app:rtl_tabIndicatorHeight="2.0dip"
+        app:rtl_tabMaxWidth="@dimen/_40sdp"
+        app:rtl_tabMinWidth="@dimen/_40sdp"
+        app:rtl_tabPadding="0.0dip"
+        app:rtl_tabPaddingBottom="0.0dip"
+        android:layout_below="@+id/stickerAlpha"
+        app:rtl_tabPaddingEnd="0.0dip"
+        app:rtl_tabPaddingStart="0.0dip"
+        app:rtl_tabPaddingTop="0.0dip"
+        app:rtl_tabSelectedTextColor="?android:textColorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="42sp" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpSticker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/collage_bg"
+        android:layout_below="@+id/rcvCateSticker"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</RelativeLayout>

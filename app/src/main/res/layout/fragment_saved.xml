@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:orientation="vertical"
+        android:layout_above="@+id/layoutAdsSaved"
+        tools:context=".framework.presentation.mycreated.MyCreatedFragment">
+
+
+        <include layout="@layout/toolbar_base"  />
+
+        <RelativeLayout
+            android:background="@drawable/bg_ads"
+            android:id="@+id/nativeMyCreated"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_marginHorizontal="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/loading_ad_mycreated"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0A000000">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="#4D000000" />
+
+                <View
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/green" />
+
+                <com.sutech.photoeditor.widget.text.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:text="Loading ad..."
+                    android:textSize="@dimen/_12ssp" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40CCCCCC">
+
+            <TextView
+                android:id="@+id/tv_no_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:text="@string/you_have_no_creations_yet"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvMyCreated"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutAdsSaved"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_height="60dp" >
+        <TextView
+            android:id="@+id/viewGoneAd"
+            android:gravity="center"
+            android:text="Loading ad..."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layoutFullImage"
+        android:focusable="true"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_above="@+id/layoutAdsSaved"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <ImageView
+            android:id="@+id/ivFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="50dp"
+            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="26dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivBackFullCreated"
+            android:padding="@dimen/_8sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/transparent_white_40"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_back_new" />
+
+        <ImageView
+            android:padding="@dimen/_8sdp"
+            android:id="@+id/ivDeleteCreated"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/transparent_white_40"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/ic_delete_new" />
+
+        <ImageView
+            android:padding="@dimen/_8sdp"
+            android:id="@+id/ivShareCreated"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/transparent_white_40"
+            android:layout_marginEnd="18dp"
+            android:layout_toStartOf="@id/ivDeleteCreated"
+            app:srcCompat="@drawable/ic_share_new"  />
+    </RelativeLayout>
+</RelativeLayout>

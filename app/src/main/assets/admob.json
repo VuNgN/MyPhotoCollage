@@ -1,0 +1,57 @@
+{
+  "network": "google",
+  "appId": "ca-app-pub-2094788208346877~4505438487",
+  "packetName": "com.sutech.photoeditor.collagemaker",
+  "listAds": [
+    {
+      "spaceName": "splash",
+      "adsType": "interstitial",
+      "id": "ca-app-pub-2094788208346877/4092602378"
+    },
+    {
+      "spaceName": "splash_open",
+      "adsType": "open_app",
+      "id": "ca-app-pub-2094788208346877/3571323584"
+    },
+    {
+      "spaceName": "native_home",
+      "adsType": "native",
+      "id": "ca-app-pub-2094788208346877/8001916080"
+    },
+    {
+      "spaceName": "banner_save",
+      "adsType": "banner_adaptive",
+      "id": "ca-app-pub-2094788208346877/3588507288"
+    },
+    {
+      "spaceName": "banner_gallery",
+      "adsType": "banner_adaptive",
+      "id": "ca-app-pub-2094788208346877/4106354363"
+    },
+    {
+      "spaceName": "banner_save_and_share",
+      "adsType": "banner_adaptive",
+      "id": "ca-app-pub-2094788208346877/8045599374"
+    },{
+      "spaceName": "banner_collage",
+      "adsType": "banner_adaptive",
+      "id": "ca-app-pub-2094788208346877/4305379501"
+    },{
+      "spaceName": "banner_edit_image",
+      "adsType": "banner_adaptive",
+      "id": "ca-app-pub-2094788208346877/7666325428"
+    },
+    {
+      "spaceName": "inter_collage",
+      "adsType": "Interstitial",
+      "id": "ca-app-pub-2094788208346877/9387628878"
+    } ,
+    {
+      "spaceName": "inter_edit_image",
+      "adsType": "Interstitial",
+      "id": "ca-app-pub-2094788208346877/9387628878"
+    }
+
+  ]
+}
+

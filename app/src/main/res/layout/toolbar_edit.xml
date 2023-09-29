@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/tbEdit"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sutech.photoeditor.widget.text.TextViewRegular
+        android:id="@+id/tvTitleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_screen_small"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDoneEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"/>
+
+
+    <ImageView
+        android:id="@+id/btnBackEdit"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_centerVertical="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="4dp"
+        app:srcCompat="@drawable/ic_back_new"
+        android:layout_marginStart="@dimen/space_screen_small"
+        android:contentDescription="@string/app_name"
+        app:tint="@color/colorTextBlack" />
+
+    <RelativeLayout
+        android:id="@+id/btnDoneEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/img_padding"
+        android:background="@drawable/bg_radius_4"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/space_screen_small"
+        android:contentDescription="@string/app_name">
+
+        <com.sutech.photoeditor.widget.text.TextViewRegular
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            app:textColorDefault="false"
+            android:text="@string/save"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_next_choose"
+            android:layout_toEndOf="@id/tvNext"
+            android:layout_marginHorizontal="6dp"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#D3D1D1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

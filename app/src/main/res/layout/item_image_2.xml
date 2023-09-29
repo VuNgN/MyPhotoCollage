@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+
+    <com.sutech.photoeditor.widget.customview.OneOneRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundTintGrey" />
+
+        <ImageView
+            android:id="@+id/imgThumb2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/bgImageSelected2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8AC4C4C4" />
+
+        <ImageView
+            android:id="@+id/imgSelected2"
+            android:layout_width="@dimen/img_size_normal"
+            android:layout_height="@dimen/img_size_normal"
+            app:srcCompat="@drawable/new_selected_image"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/img_padding_large"
+            android:contentDescription="@string/app_name" />
+
+
+    </com.sutech.photoeditor.widget.customview.OneOneRelativeLayout>
+
+</androidx.cardview.widget.CardView>

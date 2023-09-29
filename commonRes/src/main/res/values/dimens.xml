@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="img_size_largest">72dp</dimen>
+    <dimen name="img_size_large">48dp</dimen>
+    <dimen name="img_size_normal">36dp</dimen>
+    <dimen name="img_size_small">24dp</dimen>
+
+    <dimen name="img_padding">6dp</dimen>
+    <dimen name="img_padding_large">8dp</dimen>
+
+    <dimen name="space_screen_small">16dp</dimen>
+    <dimen name="space_screen_normal">24dp</dimen>
+    <dimen name="space_screen_large">32dp</dimen>
+
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+
+
+    <dimen name="ads_margin">20dp</dimen>
+
+    <dimen name="space_screen">16dp</dimen>
+    <dimen name="paragraph_space">16dp</dimen>
+    <dimen name="paragraph_space_large">24dp</dimen>
+    <dimen name="paragraph_space_2">20dp</dimen>
+    <dimen name="small_paragraph_space">8dp</dimen>
+    <dimen name="line_space">6dp</dimen>
+
+    <dimen name="padding_view">14dp</dimen>
+    <dimen name="padding_view_small">10dp</dimen>
+
+    <dimen name="radius_normal">8dp</dimen>
+    <dimen name="radius_large">24dp</dimen>
+    <dimen name="radius_small">6dp</dimen>
+
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_img_title">28sp</dimen>
+    <dimen name="img_size_normal_2">42dp</dimen>
+    <dimen name="img_size_large2">120dp</dimen>
+</resources>

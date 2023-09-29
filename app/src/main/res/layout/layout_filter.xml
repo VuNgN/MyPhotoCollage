@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layoutFilter"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <SeekBar
+        android:id="@+id/sbFilter"
+        android:layout_width="match_parent"
+        android:layout_height="30.0dip"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:background="@color/transparent_white_20"
+        android:max="100"
+        android:layout_above="@+id/rcvEditFilter"
+        android:progress="100"
+        android:thumb="@drawable/custom_thumb" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvEditFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         />
+
+</RelativeLayout>
